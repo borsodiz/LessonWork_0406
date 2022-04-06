@@ -1,10 +1,12 @@
 package main.tasks;
 
+import main.WithoutTest;
+
 public class Task {
 
     /**
      * Megkeresi az n. prímszámot. (Az első prímszám a 2)
-     *
+     * <p>
      * Biztos lehetsz benne, hogy a bemeneti paraméterként kapott n értéke pozitív egész szám.
      */
     public static int findNthPrime(int n) {
@@ -12,12 +14,14 @@ public class Task {
         használd a WithoutTest osztályban lévő isPrime metódust - például így:
         boolean isPrime = WithoutTest.isPrime(2);
          */
+        boolean isPrime = WithoutTest.isPrime(2);
+
         return -1;
     }
 
     /**
      * Megszámolja, hogy adott karakter hányszor szerepel a szövegben.
-     *
+     * <p>
      * Biztos lehet benne, hogy a szöveg hossza nagyobb 0-nál.
      */
     public static int countLetterInText(String text, char letter) {
@@ -25,15 +29,31 @@ public class Task {
         tipp:
         char oneLetter = text.charAt(0);    // a szöveg legelső, azaz 0. indexén lévő karaktere
          */
-        return -1;
+
+        int count = text.charAt(letter);
+
+        return count;
     }
+
 
     /**
      * Megszámolja, hogy adott elem hányszor szerepel a tömbben.
      */
     public static int countElemInArray(int[] array, int elem) {
-        return -1;
+        int count =0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == elem) {
+                count++;
+            }
+
+        }
+
+        return count;
     }
+
+
+
+
 
     /**
      * Megkeresi a tömb legtöbbször előforduló elemét.
@@ -48,7 +68,21 @@ public class Task {
      *              ezúttal a 2-t találja meg előbb, ezért ez a megoldás
      */
     public static int findMostFrequentElem(int[] array) {
-        return -1;
+        int count =0;
+        int first =0;
+
+        for (int i = 0; i < array.length-1; i++) {
+            first = 0;
+            if (array[first] == array [i+1]) {
+                count ++;
+            } else {
+                first ++;
+
+            }
+
+
+        }
+        return first;
     }
 
     /**
