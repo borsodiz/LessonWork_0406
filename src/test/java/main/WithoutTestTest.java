@@ -44,7 +44,8 @@ class WithoutTestTest {
 
     @Test
     void test_checkGender() {
-        // write your test cases here
+        String result1 = WithoutTest.checkGender(0);
+        assertEquals("nő",result1);
     }
 
     @Test
