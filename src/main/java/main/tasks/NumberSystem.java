@@ -27,7 +27,6 @@ public class NumberSystem {
      * és visszatér a kettes számrendszerbeli alakjával.
      */
     public static long decimalToBinary(int decimal) {
-        decimal = 4242;
 
         long binary = 0;
         long tenPower = 1;
